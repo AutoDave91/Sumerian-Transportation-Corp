@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function Fleet() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen font-[family-name:var(--font-geist-sans)]">
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center font-[family-name:var(--font-geist-sans)]">
       <Head>
         <title>Our Fleet | Sumerian Transportation Corp</title>
         <meta name="description" content="Fictional company created for Armco's Meta Campaign." />

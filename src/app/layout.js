@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
         <Starfield
           starCount={1000}
@@ -44,7 +44,7 @@ export default function RootLayout({ children }) {
         <section className="p-2 max-w-6xl m-auto h-full w-full">
           {children}
         </section>
-        <footer className="bg-gradient-to-b from-transparent to-cyan-500/75">
+        <footer className="bg-gradient-to-b from-transparent to-cyan-500/75 content-end">
           <div className="row-start-3 flex gap-6 flex-wrap items-center justify-center max-w-6xl m-auto h-20">
 
           </div>
