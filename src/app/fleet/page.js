@@ -1,3 +1,4 @@
+import Head from 'next/head';
 // add links and specific vehicle pages with stats and history.
 
 const vehicles = [
@@ -6,9 +7,25 @@ const vehicles = [
   { name: 'Scout Vehicle', type: 'Light Vehicle', portrait: '', activelyAssigned: false },
 ]
 
+export const metadata = {
+  title: "Our Fleet | Sumerian Transportation Corp",
+  description: "Fictional company created for Armco's Meta Campaign.",
+};
+
 export default function Fleet() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen font-[family-name:var(--font-geist-sans)]">
+      <Head>
+        <title>Our Fleet | Sumerian Transportation Corp</title>
+        <meta name="description" content="Fictional company created for Armco's Meta Campaign." />
+        <meta property="og:title" content="Our Fleet | Sumerian Transportation Corp" />
+        <meta property="og:description" content="Fictional company created for Armco's Meta Campaign." />
+        <meta property="og:image" content="public\images\auto-at-a-holo-map.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Our Fleet | Sumerian Transportation Corp" />
+        <meta name="twitter:description" content="Fictional company created for Armco's Meta Campaign." />
+        <meta name="twitter:image" content="public\images\auto-at-a-holo-map.jpg" />
+      </Head>
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start w-full content-center">
         <div className="h-96 mb-12 content-center">
           <h1>Sumerian Fleet</h1>

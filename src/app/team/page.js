@@ -2,6 +2,7 @@ import Image from "next/image";
 import pilot from '../../../public/images/dave-in-flight-suit.jpg';
 import commander from '../../../public/images/auto-at-a-holo-map.jpg';
 import placeholderImg from '../../../public/images/Portrait_placeholder.png';
+import Head from 'next/head';
 
 // add links and specific team member pages with bios and history.
 const staff = [
@@ -56,10 +57,25 @@ const staff = [
     photo: placeholderImg
   },
 ]
+export const metadata = {
+  title: "Meet the Team | Sumerian Transportation Corp",
+  description: "Fictional company created for Armco's Meta Campaign.",
+};
 
 export default function Team() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 font-[family-name:var(--font-geist-sans)]">
+      <Head>
+        <title>Meet the Team | Sumerian Transportation Corp</title>
+        <meta name="description" content="Fictional company created for Armco's Meta Campaign." />
+        <meta property="og:title" content="Meet the Team | Sumerian Transportation Corp" />
+        <meta property="og:description" content="Fictional company created for Armco's Meta Campaign." />
+        <meta property="og:image" content="public\images\auto-at-a-holo-map.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Meet the Team | Sumerian Transportation Corp" />
+        <meta name="twitter:description" content="Fictional company created for Armco's Meta Campaign." />
+        <meta name="twitter:image" content="public\images\auto-at-a-holo-map.jpg" />
+      </Head>
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start max-w-6xl m-auto w-full h-full">
         <div className="h-96 mb-12 content-center">
           <h1>Sumerian Team Members</h1>
