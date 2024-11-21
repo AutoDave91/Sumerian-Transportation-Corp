@@ -16,7 +16,7 @@ export default function About() {
             <p></p>
           </div>
           <div>
-            <h2>Associates we've been members of</h2>
+            <h2>Associates we&apos;ve been members of</h2>
             <p></p>
           </div>
         </section>

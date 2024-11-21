@@ -67,13 +67,12 @@ export default function Team() {
         </div>
         <div className="grid grid-cols-4 gap-5 w-full">
           {staff[0] ? staff.map((s) =>
-            <div className="bg-gradient-to-b from-cyan-500/50 via-cyan-500/25 to-cyan-500/50 p-5 rounded-lg">
+            <div className="bg-gradient-to-b from-cyan-500/50 via-cyan-500/25 to-cyan-500/50 p-5 rounded-lg" key={s.name}>
               <Image
                 src={s.photo}
                 width={300} height={300}
                 alt="Commander Auto looking at a holo map"
                 className="mb-4 m-auto rounded-lg"
-                placeholder="blur"
                 style={{ objectFit: "cover", height: '200px', width: '200px' }}
               />
               <h2>{s.name}</h2>

@@ -16,7 +16,7 @@ export default function Fleet() {
         </div>
         <div className="grid grid-cols-3 gap-5 w-full">
           {vehicles[0] ? (vehicles.map((v) =>
-            <div className="bg-gradient-to-b from-cyan-500/50 via-cyan-500/25 to-cyan-500/50 p-5 rounded-lg">
+            <div className="bg-gradient-to-b from-cyan-500/50 via-cyan-500/25 to-cyan-500/50 p-5 rounded-lg" key={v.name}>
               <h2>{v.name}</h2>
               <h3>{v.type}</h3>
             </div>)
