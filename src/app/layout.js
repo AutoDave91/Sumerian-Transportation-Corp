@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import Link from "next/link";
+import Starfield from "@/components/stars";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -24,8 +25,14 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Starfield
+          starCount={1000}
+          starColor={[255, 255, 255]}
+          speedFactor={0.05}
+          backgroundColor="black"
+        />
         <nav className="bg-gradient-to-b from-cyan-500/75 to-transparent">
-          <div className="flex justify-between p-2 pt-5 pb-5 max-w-6xl m-auto" >
+          <div className="flex justify-between p-2 pt-10 pb-10 max-w-6xl m-auto text-xl" >
             <Link href='/'>Home</Link>
             <div className="flex gap-9">
               <Link href='/about'>About</Link>
@@ -34,7 +41,9 @@ export default function RootLayout({ children }) {
             </div>
           </div>
         </nav>
-        {children}
+        <section className="p-2 max-w-6xl m-auto h-full w-full">
+          {children}
+        </section>
         <footer className="bg-gradient-to-b from-transparent to-cyan-500/75">
           <div className="row-start-3 flex gap-6 flex-wrap items-center justify-center max-w-6xl m-auto h-20">
 
